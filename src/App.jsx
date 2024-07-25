@@ -49,6 +49,9 @@ function App() {
     setTodos(updatedTodos);
   }
 
+  // Todo 삭제 기능
+  const deleteTodoHandler = (id) => setTodos(todos.filter(todo => todo.id !== id));
+
   return (
     <>
       <DefaultLayout>
@@ -63,7 +66,7 @@ function App() {
         </header>
         <section className="max-w-xl m-4 mx-auto">
           <TodoHeader onAdd={addTodoHandler}/>
-          <TodoBody todos={todos} onUpdate={updateTodoHandler}/>
+          <TodoBody todos={todos} onUpdate={updateTodoHandler} onDelete={deleteTodoHandler}/>
         </section>
       </DefaultLayout>
     </>
