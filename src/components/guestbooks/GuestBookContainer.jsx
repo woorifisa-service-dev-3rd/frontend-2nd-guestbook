@@ -25,10 +25,20 @@ const GuestBookContainer = () => {
         }
         setGuestbooks ([...guestbooks, newGuestBook])
     }
+
+    const updateGuestBookHandler = (guestbook) => {
+      const updatedBooks = guestbooks.map((guest) =>{
+        if(guest === guestbook.id){
+          return {...guest, ...guestbook}
+        }
+        return guest
+      })
+      return updatedBooks
+    }
   return (
     <section className='max-w-xl m-6 mx-auto border  border-gray-700 rounded-lg w-full my-[30px] p-[30px] bg-custom-blue'>
         <GuestBookContextForData.Provider value = {{guestbooks}}>
-            <GuestBookContextForMethod.Provider value = {{addGuestBookHandler}}>
+            <GuestBookContextForMethod.Provider value = {{addGuestBookHandler, updateGuestBookHandler}}>
             <h1 className='text-center text-2xl font-bold mb-[24px]'>방명록</h1>
             <GuestBookHeader />
             <GuestBookBody />
