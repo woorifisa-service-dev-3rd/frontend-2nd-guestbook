@@ -1,12 +1,13 @@
-import React from 'react'
 import GuestBookItem from './GuestBookItem'
 
 const GuestBookBody = () => {
   return (
-    <>
-        <div>GuestBookBody</div>
+    <div className='w-full space-y-[15px]'>
+    
         <GuestBookItem />
-    </>
+        <GuestBookItem />
+        <GuestBookItem />
+    </div>
   )
 }
 

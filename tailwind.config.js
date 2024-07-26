@@ -8,7 +8,10 @@ export default {
     extend: {
       animation: {
         'bounce-slow': 'bounce 1.8s infinite'
-      }
+      },
+      colors: {
+        'custom-blue': '#758694',
+      },
     },
   },
   plugins: [],
