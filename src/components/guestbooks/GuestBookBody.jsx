@@ -6,7 +6,7 @@ const GuestBookBody = () => {
   const {guestbooks} = useContext(GuestBookContextForData)
   return (
     <div className='w-full space-y-[15px]'>
-        {guestbooks.map((guestbook)=> <GuestBookItem key={guestbook.id}  />)}
+        {guestbooks.map((guestbook)=> <GuestBookItem key={guestbook.id} guestbook ={guestbook} />)}
     </div>
   )
 }
