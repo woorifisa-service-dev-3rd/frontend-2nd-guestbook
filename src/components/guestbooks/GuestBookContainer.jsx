@@ -8,6 +8,7 @@ import { GuestBookContextForData, GuestBookContextForMethod } from '../contexts/
 
 const GuestBookContainer = () => {
 
+<<<<<<< HEAD
     const [guestbooks, setGuestbooks] = useState(dummyGuestBooks);
     console.log("게스트북", guestbooks);
 
@@ -43,14 +44,23 @@ const GuestBookContainer = () => {
 
     }
    
+=======
+  const [guestbooks, setGuestbooks] = useState(dummyGuestBooks);
+  console.log(guestbooks)
+>>>>>>> main
 
 
 
   return (
     <section className='max-w-xl m-6 mx-auto border  border-gray-700 rounded-lg w-full my-[30px] p-[30px] bg-custom-blue'>
 
+<<<<<<< HEAD
         <GuestBookContextForData.Provider value = {guestbooks}>
             <GuestBookContextForMethod.Provider value = {{addGuestBookHandler}}>
+=======
+        <GuestBookContextForData.Provider value={{guestbooks}}>
+            <GuestBookContextForMethod.Provider>
+>>>>>>> main
             <h1 className='text-center text-2xl font-bold mb-[24px]'>방명록</h1>
             <GuestBookHeader />
             <GuestBookBody />
