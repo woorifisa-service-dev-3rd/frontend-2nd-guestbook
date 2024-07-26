@@ -62,8 +62,8 @@ function App() {
                                               
   return (
     <>
-      <DefaultLayout>
-        <header>
+      <DefaultLayout> 
+        <header >
           <div className="flex justify-center">
             <a to="/" className='flex'>
               <h1 className='py-8 text-red-200 max-w-max text-7xl'>todos
@@ -72,10 +72,17 @@ function App() {
             </a>
           </div>
         </header>
-        <section className="max-w-xl m-4 mx-auto">
-          <TodoHeader onAdd={addTodoHandler} category={selectedCategory} onFilter={setFilter}/>
-          <TodoBody todos={filteredTodos} onUpdate={updateTodoHandler} onDelete={deleteTodoHandler}/>
-        </section>
+        <div className='flex gap-12 justify-center w-full'>
+          <section className="max-w-xl m-8 mx-auto w-full">
+            <TodoHeader onAdd={addTodoHandler} category={selectedCategory} onFilter={setFilter}/>
+            <TodoBody todos={filteredTodos} onUpdate={updateTodoHandler} onDelete={deleteTodoHandler}/>
+          </section>
+          <section className='max-w-xl m-6 mx-auto bg-slate-500 w-full'>
+           
+          </section>
+        </div>
+      
+      
       </DefaultLayout>
     </>
   )
