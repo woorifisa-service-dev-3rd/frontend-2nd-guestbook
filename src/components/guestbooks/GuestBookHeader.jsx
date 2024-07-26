@@ -1,9 +1,9 @@
 import React from 'react'
 
 const GuestBookHeader = () => {
-  return (
-    <div>GuestBookHeader</div>
-  )
-}
+    return (
+            <div></div>
+      );
+};
 
 export default GuestBookHeader

@@ -78,6 +78,11 @@ function App() {
           <TodoHeader onAdd={addTodoHandler} category={selectedCategory} onFilter={setFilter}/>
           <TodoBody todos={filteredTodos} onUpdate={updateTodoHandler} onDelete={deleteTodoHandler}/>
         </section>
+
+        <section>
+          <GuestBookHeader />
+          <GuestBookBody />
+        </section>
       </DefaultLayout>
     </>
   )
