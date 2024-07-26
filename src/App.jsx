@@ -2,8 +2,7 @@ import { useState } from 'react'
 import TodoBody from './components/todos/TodoBody'
 import TodoHeader from './components/todos/TodoHeader'
 import DefaultLayout from './layouts/DefaultLayout'
-import GuestBookHeader from './components/guestbooks/GuestBookHeader'
-import GuestBookBody from './components/guestbooks/GuestBookBody'
+
 import GuestBookContainer from './components/guestbooks/GuestBookContainer'
 
 const dummyTodos = [
