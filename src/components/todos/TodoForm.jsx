@@ -23,7 +23,7 @@ const TodoForm = ({ onAdd, onUpdate, onClose, children, todo }) => {
                 title, // title: title과 같음
                 summary,
                 category
-            }
+            }   
             onUpdate(updateTodo);
         }
         onClose()

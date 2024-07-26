@@ -17,7 +17,7 @@ export const dummyGuestBooks = [
             nickname : '사람3',
             context : "테스트3",
             datetime: '2024-05-15 18:20:00'
-        },
+        }, 
         {
             id : 14,
             nickname : '사람4',
