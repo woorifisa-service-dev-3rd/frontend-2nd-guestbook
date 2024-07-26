@@ -1,12 +1,10 @@
 import GuestBookItem from './GuestBookItem'
 
-const GuestBookBody = () => {
+const GuestBookBody = ({guestbooks}) => {
+
   return (
     <div className='w-full space-y-[15px]'>
-    
-        <GuestBookItem />
-        <GuestBookItem />
-        <GuestBookItem />
+      {guestbooks.map((guestbook)=> <GuestBookItem key={guestbook.id}  />)}
     </div>
   )
 }
