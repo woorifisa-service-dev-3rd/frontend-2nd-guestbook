@@ -1,7 +1,7 @@
 import IconButton from '@/components/ui/IconButton'
 import { useContext, useState } from 'react'
 import { GuestBookContextForMethod, GuestBookContextForData } from '../contexts/GuestBookContexts'
-import { getCurrentDateTime } from './GuestBookContainer'
+import { getCurrentDatetime } from '../../utils/getCurrentDatetime'
 
 const GuestBookItem = ({guestbook}) => {
   const [updateToggle, setUpdateToggle] = useState(false)
@@ -18,7 +18,7 @@ const GuestBookItem = ({guestbook}) => {
   const updateContentHandler = () => {
     setGuestbooks(
       guestbooks.map(onebook =>
-        onebook.id === guestbook.id ? { ...onebook, content: updatedContent, datetime: getCurrentDateTime() } : onebook
+        onebook.id === guestbook.id ? { ...onebook, content: updatedContent, datetime: getCurrentDatetime() } : onebook
       )
     )
     setUpdateToggle(false)
@@ -39,15 +39,17 @@ const GuestBookItem = ({guestbook}) => {
           </div>
           <div className='py-3 px-1 rounded-md relative'>
             {updateToggle === false && <div className='break-words'>{guestbook.content}</div>}
-            {updateToggle === true && <input className='break-words ' type="text"  value={updatedContent}
-              onChange={(e) => setUpdatedContent(e.target.value)}/>}
+           
 
             {updateToggle === false &&   <div className='absolute bottom-2 right-2'>
               <IconButton  onClick={()=>setUpdateToggle(!updateToggle)} icon={'✏️'} />
               <IconButton textColor='text-gray-300' icon={'🗑'} onClick = {deleteOnHandler} />
             </div>} 
+
+            {updateToggle === true && <input className='break-words p-2 rounded-md w-full border border-gray-300 text-sm' type="text"  value={updatedContent}
+              onChange={(e) => setUpdatedContent(e.target.value)}/>}
             {updateToggle === true &&   <div className='absolute bottom-2 right-2'> 
-               <button onClick={updateContentHandler} >Update</button>
+               <button className='bg-gray-500 text-white px-4 py-1 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500' onClick={updateContentHandler} >Update</button>
             </div>}
           
           
